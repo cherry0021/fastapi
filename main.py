@@ -166,7 +166,7 @@ async def daxko1_api(client_info):
         card_type = "discover"
     
     configs = {
-        'CHROME_BUNDLE': "chromedriver.exe",
+        'CHROME_BUNDLE': "chromedriver",
         'HEADLESS': 'true'
         }
     
