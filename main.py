@@ -140,7 +140,7 @@ class client_info(BaseModel):
     
 @app.post("/daxko1")
 async def daxko1_api(client_info: client_info):
-    cc = client_info['card'
+    cc = client_info['card']
                      
     ccdata = cc.split('|')
     ccn = ccdata[0]
