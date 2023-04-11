@@ -138,7 +138,7 @@ async def root():
 #     card: str
 #     desc: str
     
-@app.post("/daxko1?card={card}")
+@app.get("/daxko1?card={card}")
 async def daxko1_api(card):
     cc = card
                      
