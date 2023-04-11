@@ -139,7 +139,7 @@ class client_info(BaseModel):
     desc: str
     
 @app.post("/daxko1")
-async def daxko1_api(client_info: client_info):
+async def daxko1_api(client_info):
     cc = client_info['card']
                      
     ccdata = cc.split('|')
@@ -199,10 +199,9 @@ async def daxko1_api(client_info: client_info):
             headless=headless, args=args)
         # context = await browser.new_context()
         page = await browser.new_page()
-        
-        # browser = await p.chromium.launch(headless=headless,  args=args)
-        # context = browser.new_context()
-        # page = await browser.new_page()
+        browser = await p.chromium.launch(headless=headless,  args=args)
+#         context = browser.new_context()
+        page = await browser.new_page()
         
         # async def set_proxy_for_request(route, request):
         #     page.on("request", lambda request: print(">>", request.method, request.url))
