@@ -27,3 +27,5 @@ celery
 cloudscraper
 flask_cache
 flask_restx
+uvloop
+flask
