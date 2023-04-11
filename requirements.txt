@@ -29,3 +29,4 @@ flask_cache
 flask_restx
 uvloop
 flask
+prettify
