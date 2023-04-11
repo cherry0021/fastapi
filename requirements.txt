@@ -30,3 +30,4 @@ flask_restx
 uvloop
 flask
 prettify
+ffmpeg
