@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn index:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --host 0.0.0.0:80 --port $PORT",
+    "startCommand": "gunicorn index:app --workers 4 --worker-class uvicorn.workers.UvicornWorker -A 0.0.0.0:$PORT",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
