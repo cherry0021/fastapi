@@ -134,13 +134,13 @@ async def root():
 
 
         
-class client_info(BaseModel):
-    card: str
-    desc: str
+# class client_info(BaseModel):
+#     card: str
+#     desc: str
     
-@app.post("/daxko1")
-async def daxko1_api(client_info):
-    cc = client_info['card']
+@app.post("/daxko1?card={card}")
+async def daxko1_api(card):
+    cc = card
                      
     ccdata = cc.split('|')
     ccn = ccdata[0]
