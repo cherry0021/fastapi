@@ -32,3 +32,4 @@ flask
 prettify
 ffmpeg
 undetected_chromedriver
+httptools
