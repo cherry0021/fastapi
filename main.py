@@ -12,10 +12,15 @@ import undetected_chromedriver as uc
 from playwright_stealth import stealth_async
 from randomuser import RandomUser
 
+
+
+
 app = FastAPI()
 
 
-        
+class client_info(BaseModel):
+    card: str
+    desc: str        
         
 def find_between(data, first, last):
     try:
@@ -134,9 +139,7 @@ async def root():
 
 
         
-# class client_info(BaseModel):
-#     card: str
-#     desc: str
+
     
 @app.route('/daxko/', methods=['POST'])
 async def daxko1_api(card):
