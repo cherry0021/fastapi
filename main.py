@@ -7,7 +7,7 @@ import prettify
 import random
 from playwright_recaptcha import recaptchav2
 import requests
-from rotatingproxy import rotate_masked
+# from rotatingproxy import rotate_masked
 import undetected_chromedriver as uc
 from playwright_stealth import stealth_async
 from randomuser import RandomUser
@@ -224,7 +224,7 @@ async def daxko1_api(client_info: client_info):
         await page.goto(content.url)
         await page.wait_for_load_state(timeout=15000)
         await page.wait_for_timeout(10000)
-        page.proxy = rotate_masked()
+#         page.proxy = rotate_masked()
         async with recaptchav2.AsyncSolver(page) as solver:
             await stealth_async(page)
             token = await solver.solve_recaptcha()
