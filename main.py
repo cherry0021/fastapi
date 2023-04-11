@@ -120,13 +120,26 @@ def random_url():
 #                  break
 #          tries += 1
  
-    
+@app.get("/")
+async def root(client_info: client_info):  
+        return """
+     CUSTOM GATEWAY CHECKER. by Dr. Ugs Security Production (Security Tester and IT consultant service.)
+
+    this tool is used for checking information used for fr4ud transaction. i build this tool for security purposes only.
+
+    Note:
+        You can use this script at your own risks. i will not responsible of any the damage of this script in the future
+        think wise !
+        """
+
+
+        
 class client_info(BaseModel):
     card: str
     desc: str
     
 @app.post("/daxko1")
-async def root(client_info: client_info):
+async def daxko1_api(client_info: client_info):
     cc = client_info['card'
                      
     ccdata = cc.split('|')
