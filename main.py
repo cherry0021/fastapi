@@ -138,10 +138,11 @@ async def root():
 #     card: str
 #     desc: str
     
-@app.get("/daxko1?card={card}")
+@app.route('/daxko/', methods=['POST'])
 async def daxko1_api(card):
-    cc = card
-                     
+    data = request.get_json() 
+    cc = data['card']
+                    
     ccdata = cc.split('|')
     ccn = ccdata[0]
     mm = ccdata[1]
