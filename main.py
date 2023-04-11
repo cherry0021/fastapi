@@ -121,7 +121,7 @@ def random_url():
 #          tries += 1
  
 @app.get("/")
-async def root(client_info: client_info):  
+async def root():  
         return """
      CUSTOM GATEWAY CHECKER. by Dr. Ugs Security Production (Security Tester and IT consultant service.)
 
